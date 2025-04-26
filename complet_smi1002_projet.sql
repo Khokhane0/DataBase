@@ -40,6 +40,8 @@ CREATE TABLE Retour (
     FOREIGN KEY (id_reservation) REFERENCES Reservation(id_reservation)
 );
 
+ALTER TABLE Retour
+MODIFY date_retour_effectif TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
 -- TABLE 5 : JournalTransaction
 CREATE TABLE JournalTransaction (
     id_log NUMBER PRIMARY KEY,
